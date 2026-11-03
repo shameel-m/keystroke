@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101315">
+<title>keystroke — typing test</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="#"><span class="brand-mark">k.</span><span>keystroke<small>TYPE WITH INTENTION</small></span></a>
+  <nav class="nav"><button class="active" id="navTest">test</button></nav>
+  <a class="github-link" href="#" aria-label="GitHub project link" title="Add your GitHub repository URL"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.76 2.02 3.2 1.54.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.24-5.1 5.51.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg><span>github</span></a>
+</header>
+<main>
+  <h1>Find your <span>flow.</span><br></h1>
+  <p class="sub">A quiet place to sharpen your typing. No noise, just you and the keys.</p>
+
+  <section class="test-shell" id="test">
+    <div class="toolbar">
+      <div class="modes" aria-label="Test mode">
+        <button class="selected" data-mode="time">time</button><button data-mode="words">words</button>
+      </div>
+      <div class="settings" id="options">
+        <button class="selected" data-value="15">15</button><button data-value="30">30</button><button data-value="60">60</button><button data-value="120">120</button>
+      </div>
+    </div>
+    <div class="stats"><div class="stat">WPM<strong id="liveWpm">0</strong></div><div class="stat">ACCURACY<strong id="liveAcc">100%</strong></div><div class="stat">WORDS<strong id="liveWords">0 / 15</strong></div></div>
+    <div class="timer" id="timer">15</div>
+    <div class="typing-card" id="typingCard" tabindex="0" role="button" aria-label="Typing test area. Click and start typing.">
+      <div class="words" id="words"></div>
+      <input class="hidden-input" id="typingInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type the displayed words here">
+      <div class="test-hint"><span>start typing to begin</span><span><kbd>tab</kbd> + <kbd>enter</kbd> restart</span></div>
+    </div>
+    <div class="bottom-row"><button class="restart" id="restart"><span>↻</span> restart test</button></div>
+    <div class="results" id="results">
+      <div class="result-top"><div><h2>Nicely done.</h2><p>Every session is a little progress.</p></div><span class="eyebrow">SESSION COMPLETE</span></div>
+      <div class="result-grid">
+        <div class="result-box"><label>WPM</label><strong id="finalWpm">0</strong></div>
+        <div class="result-box"><label>ACCURACY</label><strong id="finalAcc">0%</strong></div>
+        <div class="result-box"><label>CHARACTERS</label><strong id="finalChars">0</strong></div>
+        <div class="result-box"><label>CONSISTENCY</label><strong id="finalCons">—</strong></div>
+      </div>
+      <div class="result-actions"><button class="primary" id="again">try again ↗</button><button id="copyResult">copy result</button></div>
+    </div>
+  </section>
+</main>
+<footer><span>© 2026 KEYSTROKE — MADE FOR THE LOVE OF TYPING</span><span>DESIGNED TO <span class="footer-accent">FLOW</span></span></footer>
+</div>
+<div class="toast" id="toast">Copied to clipboard</div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
